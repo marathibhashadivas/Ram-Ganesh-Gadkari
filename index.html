@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>राम गणेश गडकरी माहिती</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-image: url('i.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 92%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .author-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .author-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .author-image img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight:bold;
+            position: absolute;
+            left: 0;
+            height: 10px;
+        }
+
+        .translate-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .translate-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 15px;
+            }
+
+            .translate-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 10px;
+            }
+
+            .translate-btn {
+                padding: 8px 15px;
+                font-size: 22px;
+            }
+
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .author-image img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <div class="author-image">
+            <img src="image.png" alt="राम गणेश गडकरी">
+        </div>
+
+        <div id="marathi-content">
+            <p>(२६ मे १८८५ - २३ जानेवारी १९१९)</p>
+            <p>मराठी साहित्यातील नव्या युगातील परिवर्तनातील महत्वाचे लेखक गोविंदाग्रज म्हणजेच राम गणेश गडकरी यांची कविता एकाच वेळी भावोत्कटता व कल्पनाचमत्कृती यांचा प्रत्यय देते. त्यांच्या नेहमी ताजे व प्रसन्न करणाऱ्या लेखनाला ही प्रखर समाजवादाची धार आहे. त्यांच्या “एकाच प्याला” या नाटकाने इतिहास घडवला.</p>
+
+            <h2>महत्वाचे साहित्यिक योगदान:</h2>
+            <h3>नाटक:</h3>
+            <ul>
+                <li>एकच प्याला</li>
+                <li>पुण्यप्रभाव</li>
+                <li>गर्वनिर्वाण</li>
+                <li>प्रेमसंन्यास</li>
+                <li>भावबंधन</li>
+                <li>आणि इतर ४ नाटके</li>
+            </ul>
+
+            <h3>काव्य संग्रह:</h3>
+            <ul>
+                <li>वागवैजयंती</li>
+            </ul>
+
+            <h3>विनोदी लेखन:</h3>
+            <ul>
+                <li>संपूर्ण बाळकराम</li>
+            </ul>
+        </div>
+
+        <button class="translate-btn">English </button>
+    </div>
+
+    <script>
+        const translateBtn = document.querySelector(".translate-btn");
+        const marathiContent = document.getElementById("marathi-content");
+        let isMarathi = true;
+
+        translateBtn.addEventListener("click", function() {
+            if (isMarathi) {
+                // Switch to English
+                translateBtn.textContent = "मराठी ";
+                document.documentElement.lang = "en";
+                marathiContent.innerHTML = `
+                    <p>(26 May 1885 - 23 January 1919)</p>
+                    <p>Govindagraj, also known as Ram Ganesh Gadkari, was an important writer in the transformation of the new era in Marathi literature. His poetry simultaneously conveys intense emotion and imaginative creativity. His always fresh and delightful writing also has a sharp edge of socialism. His play "Ekach Pyala" made history.</p>
+
+                    <h2>Important Literary Contributions:</h2>
+                    <h3>Plays:</h3>
+                    <ul>
+                        <li>Ekach Pyala</li>
+                        <li>Punyaprabha</li>
+                        <li>Garvanirvan</li>
+                        <li>Premsanyas</li>
+                        <li>Bhavbandhan</li>
+                        <li>And 4 other plays</li>
+                    </ul>
+
+                    <h3>Poetry Collections:</h3>
+                    <ul>
+                        <li>Vagvaijayanti</li>
+                    </ul>
+
+                    <h3>Humorous Writing:</h3>
+                    <ul>
+                        <li>Sampurna Balkaram</li>
+                    </ul>
+                `;
+            } else {
+                // Switch back to Marathi
+                document.documentElement.lang = "mr";
+                location.reload();
+            }
+            isMarathi = !isMarathi;
+        });
+    </script>
+</body>
+</html>
